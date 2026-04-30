@@ -1,0 +1,12 @@
+<section class="flex gap-2">
+    @for (region of regionsOptions; track region){
+    <button class="btn "
+    [class.btn-primary]="selectedRegion() !== region" 
+    [class.btn-secondary]="selectedRegion() === region"
+    (click)="selectRegion(region)">{{region}}</button>
+
+    }
+</section>
+
+<country-list [countries]="byRegionResource.value() ?? []"
+></country-list>
