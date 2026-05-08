@@ -85,8 +85,8 @@ export class CountryService {
 
   }
 
-  searchByRegion(region: regionType) {
-    const query = region.toLowerCase();
+  searchByRegion(query: regionType) {
+
     const url = `${API_URL}/region/${query}`;
 
     if (this.cacheByRegion.has(query)) {

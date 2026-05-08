@@ -8,5 +8,9 @@
     }
 </section>
 
-<country-list [countries]="byRegionResource.value() ?? []"
+<country-list 
+[countries]="byRegionResource.value() ?? []"
+[errorMessage]="byRegionResource.error() ?? []"
+[isEmpty]="byRegionResource.value()?.length ===0"
+[isLoading]="byRegionResource.isLoading()"
 ></country-list>
